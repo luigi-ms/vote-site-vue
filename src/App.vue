@@ -6,20 +6,29 @@
 			dark
 			app>
 			<v-toolbar-title>Voting Site</v-toolbar-title>
-
-			<template v-slot:extension>
-				<v-tabs>
-					<v-tab to="/">Homepage</v-tab>
-					<v-tab to="/vote">Vote</v-tab>
-					<v-tab to="/profile/candidate">Candidate Profile</v-tab>
-				</v-tabs>
-			</template>
 		</v-app-bar>
 
 		<v-main id="content">
 			<v-container fluid>
 				<router-view/>
 			</v-container>
+
+			<v-bottom-navigation fixed
+				:value="current" 
+				background-color="deep-purple darken-4"
+				color="primary"
+				dark
+				grow>
+				<v-btn to="/">
+					<span>Home</span>
+				</v-btn>
+				<v-btn to="/vote">
+					<span>Vote</span>
+				</v-btn>
+				<v-btn to="/profile/candidate">
+					<span>Candidate</span>
+				</v-btn>
+			</v-bottom-navigation>
 		</v-main>
   </v-app>
 </template>
@@ -28,7 +37,7 @@
 export default {
 	name: 'App',
 	data: () => ({
-		//
+		current: "home"
 	})
 };
 </script>
