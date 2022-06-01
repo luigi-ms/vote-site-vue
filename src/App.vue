@@ -12,12 +12,11 @@
 					<v-tab to="/">Homepage</v-tab>
 					<v-tab to="/vote">Vote</v-tab>
 					<v-tab to="/profile/candidate">Candidate Profile</v-tab>
-					<v-tab to="/profile/voter">Voter Profile</v-tab>
 				</v-tabs>
 			</template>
 		</v-app-bar>
 
-		<v-main color="indigo lighten-5">
+		<v-main id="content">
 			<v-container fluid>
 				<router-view/>
 			</v-container>
@@ -33,3 +32,10 @@ export default {
 	})
 };
 </script>
+
+<style>
+#content {
+	background-color: #212121;
+	color: #F5F5F5;
+}
+</style>
