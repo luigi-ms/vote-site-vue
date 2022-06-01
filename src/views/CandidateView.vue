@@ -4,13 +4,13 @@
 			<h1>My Profile</h1>
 		</v-col>
 		<v-col cols=12 md=8>
-			//
+			Codar a area de perfil do candidato
 		</v-col>
 	</v-row>
 </template>
 
 <script>
   export default {
-    name: 'MyProfileView',
+    name: 'CandidateView',
   }
 </script>

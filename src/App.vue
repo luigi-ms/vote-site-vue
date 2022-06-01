@@ -11,7 +11,8 @@
 				<v-tabs>
 					<v-tab to="/">Homepage</v-tab>
 					<v-tab to="/vote">Vote</v-tab>
-					<v-tab to="/profile">My Profile</v-tab>
+					<v-tab to="/profile/candidate">Candidate Profile</v-tab>
+					<v-tab to="/profile/voter">Voter Profile</v-tab>
 				</v-tabs>
 			</template>
 		</v-app-bar>
@@ -32,6 +33,3 @@ export default {
 	})
 };
 </script>
-
-<style>
-</style>

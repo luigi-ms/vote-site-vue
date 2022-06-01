@@ -2,9 +2,11 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import HomeView from '../views/HomeView.vue';
-import SignView from '../views/SignView.vue';
+import SignInView from '../views/SignInView.vue';
+import SignUpView from '../views/SignUpView.vue';
 import VoteView from '../views/VoteView.vue';
-import MyProfileView from '../views/MyProfileView.vue';
+import CandidateView from '../views/CandidateView.vue';
+import VoterView from '../views/VoterView.vue';
 
 Vue.use(VueRouter)
 
@@ -20,14 +22,24 @@ const routes = [
 		component: VoteView 
   },
   {
-    path: '/profile',
-    name: 'profile',
-		component: MyProfileView 
+    path: '/profile/candidate',
+    name: 'profileCand',
+		component: CandidateView 
+  },
+  {
+    path: '/profile/voter',
+    name: 'profileVot',
+		component: VoterView 
   },
   {
     path: '/signIn',
     name: 'signIn',
-		component: SignView 
+		component: SignInView 
+  },
+  {
+    path: '/signUp',
+    name: 'signUp',
+		component: SignUpView 
   }
 ];
 
