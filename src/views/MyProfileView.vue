@@ -1,14 +1,13 @@
 <template>
-	<div>
-		<h1>Ranking</h1>
-	</div>
+	<h1>My Profile</h1>
 </template>
 
 <script>
   export default {
-    name: 'HomeView',
+    name: 'MyProfileView',
 
     components: {
+    
     },
   }
 </script>

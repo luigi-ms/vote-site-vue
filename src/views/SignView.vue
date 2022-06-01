@@ -1,12 +1,10 @@
 <template>
-	<div>
-		<h1>Ranking</h1>
-	</div>
+	<h1>Sign In</h1>
 </template>
 
 <script>
   export default {
-    name: 'HomeView',
+    name: 'SingInView',
 
     components: {
     },
