@@ -2,7 +2,7 @@
   "name": "vote-site-vue",
   "version": "0.1.0",
   "private": true,
-	"type": "module",
+  "type": "module",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -11,6 +11,7 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "firebase": "^9.8.2",
+    "firebase-admin": "^10.2.0",
     "firebase-tools": "^11.0.1",
     "font-awesome": "4.7.0",
     "roboto-fontface": "*",
