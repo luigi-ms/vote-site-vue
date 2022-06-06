@@ -1,27 +1,24 @@
-import { doc, setDoc, getDoc, updateDoc, deleteDoc } from "firebase/firestore";
+import { collection, doc, setDoc, getDoc, updateDoc, deleteDoc } from "firebase/firestore";
 import db from "./config.js";
+import Candidate from "./Candidate.js";
 
-class Candidate {
+export class CandidateDAO extends Candidate{
 	constructor(){
-		this.name = "";
-		this.party = "";
-		this.digits = 0;
-		this.password = "";
-		this.id = this.name + this.digits;
+		super();
 	}
 
 	async create(){
 		try {
 			const created = await setDoc(doc(db, 'Candidates', this.name+this.digits), {
-		    name: this.name,
-  		  party: this.party,
-    		digit: this.digits,
+				name: this.name,
+				party: this.party,
+				digit: this.digits,
 				password: this.password
-		  });
+			});
 
-  		return Promise.resolve(created);
+			return Promise.resolve(created);
 		} catch (err) {
-  		return Promise.reject(err);
+			return Promise.reject(err);
 		}
 	}
 
@@ -36,6 +33,16 @@ class Candidate {
 			}
 		}catch(err){
 			return Promise.reject(err);
+		}
+	}
+
+	async getAll(){
+		try{
+			const allDocs = await getDoc(collection(db, "Candidates"));
+
+			return Promise.resolve(allDocs);
+		}catch(err){
+			Promise.reject(err);
 		}
 	}
 
@@ -73,45 +80,5 @@ class Candidate {
 		}catch(err){
 			return Promise.reject(err);
 		}
-	}
-
-	get name(){
-		return this._name;
-	}
-
-	get party(){
-		return this._party;
-	}
-	
-	get digits(){
-		return this._digits;
-	}
-
-	get password(){
-		return this._password;
-	}
-
-	get id(){
-		return this._id;
-	}
-
-	set name(newName){
-		this._name = newName;
-	}
-	
-	set party(newParty){
-		this._party = newParty;
-	}
-	
-	set digits(newDigits){
-		this._digits = newDigits;
-	}
-	
-	set password(newPassword){
-		this._password = newPassword;
-	}
-
-	set id(newId){
-		this._id = newId;
 	}
 }

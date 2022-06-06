@@ -10,7 +10,7 @@
 
 		<v-main id="content">
 			<v-container fluid>
-				<router-view/>
+				<router-view />
 			</v-container>
 
 			<v-bottom-navigation fixed
@@ -34,10 +34,13 @@
 </template>
 
 <script>
+import CandidateActions from '../model/CandidateActions.js';
+
 export default {
 	name: 'App',
 	data: () => ({
-		current: "home"
+		current: "home",
+		user: new CandidateActions()
 	})
 };
 </script>

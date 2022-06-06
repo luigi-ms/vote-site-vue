@@ -31,6 +31,9 @@
 
 <script>
   export default {
-    name: 'SingUpView',
+		name: 'SingUpView',
+		props: {
+			candidate: Object
+		}
   }
 </script>
