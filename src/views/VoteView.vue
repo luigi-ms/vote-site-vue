@@ -8,12 +8,14 @@
 				<v-container>
 					<v-row>
 						<v-col cols=10 md=6>
-							<v-text-field 
+							<v-text-field dark
+								outlined
 								label="Voter number"
 								required/>
 						</v-col>
 						<v-col cols=10 md=6>
-							<v-text-field 
+							<v-text-field dark
+								outlined
 								label="Candidate number"
 								required/>
 						</v-col>

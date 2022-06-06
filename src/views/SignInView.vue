@@ -8,16 +8,22 @@
 				<v-container>
 					<v-row>
 						<v-col cols=10 md=7>
-							<v-text-field outlined label="ID" required/>
+							<v-text-field dark
+								outlined
+								label="ID"
+								required/>
 						</v-col>
 						<v-col cols=10 md=7>
-							<v-text-field outlined label="Password" required />
+							<v-text-field dark
+								outlined
+								label="Password"
+								required />
 						</v-col>
 						<v-col cols=6 md=4>
 							<v-btn color="primary">SignIn</v-btn>
 						</v-col>
 						<v-col cols=6 md=4>
-							<v-btn outlined>SignUp</v-btn>
+							<v-btn outlined dark>SignUp</v-btn>
 						</v-col>
 					</v-row>
 				</v-container>

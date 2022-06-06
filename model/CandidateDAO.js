@@ -2,7 +2,7 @@ import { collection, doc, setDoc, getDoc, updateDoc, deleteDoc } from "firebase/
 import db from "./config.js";
 import Candidate from "./Candidate.js";
 
-export class CandidateDAO extends Candidate{
+export default class CandidateDAO extends Candidate{
 	constructor(){
 		super();
 	}

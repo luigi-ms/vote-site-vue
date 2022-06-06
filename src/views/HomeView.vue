@@ -4,7 +4,7 @@
 			<h1>Ranking</h1>
 		</v-col>
 		<v-col cols=12 md=8>
-			<v-simple-table fixed-header>
+			<v-simple-table fixed-header dark>
 				<template v-slot:default>
 					<thead>
 						<tr>

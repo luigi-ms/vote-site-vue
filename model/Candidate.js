@@ -1,4 +1,4 @@
-export class Candidate {
+export default class Candidate {
 	constructor(){
 		this.name = "";
 		this.party = "";

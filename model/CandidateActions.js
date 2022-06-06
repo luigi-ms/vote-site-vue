@@ -1,6 +1,6 @@
 import CandidateDAO from './CandidateDAO.js';
 
-export class CandidateActions {
+export default class CandidateActions {
 	static async signUp(name, party, digits, password){
 		const cand = new CandidateDAO();
 

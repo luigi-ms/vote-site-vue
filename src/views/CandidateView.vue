@@ -4,7 +4,7 @@
 			<h1>My Profile</h1>
 		</v-col>
 		<v-col cols=12 md=8 color="blue-grey darken-4" dark>
-			<v-card class="mx-auto"> 
+			<v-card class="mx-auto" dark> 
 				<v-list disabled>
 					<v-subhead>{{ user.name }}</v-subhead>
 					<v-list-item>

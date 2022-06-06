@@ -19,13 +19,13 @@
 				color="primary"
 				dark
 				grow>
-				<v-btn to="/">
+				<v-btn class="navButton" to="/">
 					<span>Home</span>
 				</v-btn>
-				<v-btn to="/vote">
+				<v-btn class="navButton" to="/vote">
 					<span>Vote</span>
 				</v-btn>
-				<v-btn to="/profile/candidate">
+				<v-btn class="navButton" to="/profile/candidate">
 					<span>Candidate</span>
 				</v-btn>
 			</v-bottom-navigation>
@@ -34,13 +34,10 @@
 </template>
 
 <script>
-import CandidateActions from '../model/CandidateActions.js';
-
 export default {
 	name: 'App',
 	data: () => ({
-		current: "home",
-		user: new CandidateActions()
+		current: "home"
 	})
 };
 </script>
@@ -49,5 +46,9 @@ export default {
 #content {
 	background-color: #212121;
 	color: #F5F5F5;
+}
+
+.navButton {
+	height: 17vh;
 }
 </style>
