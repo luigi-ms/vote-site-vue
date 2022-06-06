@@ -3,7 +3,7 @@ node_modules
 /dist
 
 # Firebase Auth File
-./model/config.js
+model/config.js
 
 # local env files
 .env.local
