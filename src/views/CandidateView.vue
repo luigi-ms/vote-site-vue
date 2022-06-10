@@ -7,7 +7,7 @@
 			<v-card class="mx-auto" dark> 
 				<v-list disabled>
 					<v-subhead>{{ user.name }}</v-subhead>
-					<v-list-item>
+					<v-list-item> 
 						<v-list-item-content>
 							<v-list-item-title>Party: {{ user.party }}</v-list-item-title>
 						</v-list-item-content>
