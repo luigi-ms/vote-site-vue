@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  margin-bottom: 3vh;
+}
+form #buttonGroup {
+  display: inherit;
+  justify-content: space-around;
+}
+
+/*# sourceMappingURL=main.css.map */

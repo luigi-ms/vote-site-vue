@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>VoteSys - Inicio</title>
+		<link rel="stylesheet" href="./style/main.css"/>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+			rel="stylesheet" 
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+			crossorigin="anonymous">
+	</head>
+	<body>
+		<nav class="navbar navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a href="./index.html" class="navbar-brand">VoteSys</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon" />
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="./index.html">Homepage</a>
+        		</li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="./results.html">Resultados</a>
+    		    </li>
+    		  </ul>
+		    </div>
+			</div>
+		</nav>
+
+		<main class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<h1>Votar</h1>
+					<form>
+						<label for="electorIdField" class="form-label-sm">Título de eleitor</label>
+						<input id="electorIdField" type="number" class="form-control" placeholder="0123 4567 8901"/>
+
+						<label for="candidateIdField" class="form-label-sm">Número do candidato</label>
+						<input id="candidateIdField" type="number" class="form-control" placeholder="013"/>
+
+						<div id="buttonGroup">
+							<button type="submit" class="btn btn-success">Confirma</button>
+							<button type="reset" class="btn btn-outline-dark">Corrige</button>
+							<button type="submit" class="btn btn-outline-info">Branco</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+			crossorigin="anonymous"></script>
+	</body>
+</html>

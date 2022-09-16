@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>VoteSys - Resultado</title>
+		<link rel="stylesheet" href="./style/main.css"/>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+			rel="stylesheet" 
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+			crossorigin="anonymous">
+	</head>
+	<body>
+		<nav class="navbar navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a href="./index.html" class="navbar-brand">VoteSys</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon" />
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="./index.html">Homepage</a>
+        		</li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="./results.html">Resultados</a>
+						</li>
+    		  </ul>
+		    </div>
+			</div>
+		</nav>
+
+		<main class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<h1>Resultado</h1>
+
+					<table class="table table-info table-striped table-responsive">
+						<thead>
+							<tr>
+								<th>Número</th>
+								<th>Nome</th>
+								<th>Partido</th>
+								<th>Total de Votos</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="app"></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</main>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+			crossorigin="anonymous"></script>
+
+		<script type="module">
+			import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+			import ResultsComponent from './results.component.js';
+
+  		createApp(ResultsComponent).mount('#app')
+		</script>
+	</body>
+</html>
