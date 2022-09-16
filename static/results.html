@@ -46,9 +46,7 @@
 								<th>Total de Votos</th>
 							</tr>
 						</thead>
-						<tbody>
-							<tr id="app"></tr>
-						</tbody>
+						<tbody id="app"></tbody>
 					</table>
 				</div>
 			</div>
@@ -58,11 +56,38 @@
 			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
 			crossorigin="anonymous"></script>
 
-		<script type="module">
-			import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-			import ResultsComponent from './results.component.js';
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		
+		<script>
+		//	import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+//			import ResultsComponent from './results.component.js';
+			const candidates = require('./candidates.json');
 
-  		createApp(ResultsComponent).mount('#app')
+  		createApp({
+				data() {
+					return {
+						candslist: [],
+						jsonFile: importing()
+					}
+				},
+				mounted() {
+					this.candslist = this.jsonFile.list;
+				},
+				methods: {
+					importing() {
+						return JSON.parse(candidates);
+					}
+				},
+				template: `<tr v-for='cand in candslist' :key='cand'>
+					<td>{{ cand.id }}</td>
+					<td>{{ cand.name }}</td>
+					<td>{{ cand.party }}</td>
+					<td>{{ cand.totalVotes }}</td>
+				</tr>`
+			}).mount('#app')
 		</script>
+
+		<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+		<script>eruda.init();</script>
 	</body>
 </html>

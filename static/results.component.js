@@ -1,15 +1,18 @@
-class Candidate {
-	constructor(){
-		this.name = "";
-		this.totalVotes = 0;
-		this.id = 0;
-		this.party = "";
-	}
-}
-
 export default {
 	data() {
-		return { datalist: [""] }
+		return {
+			candslist: [],
+			jsonFile: candidates
+		}
 	},
-	template: "<td>{{ message }}</td>"
+	created() { console.log("Created") },
+	mounted() {
+		this.candslist = this.jsonFile;
+	},
+	template: `<tr v-for='cand in candslist' :key='cand'>
+		<td>{{ cand.id }}</td>
+		<td>{{ cand.name }}</td>
+		<td>{{ cand.party }}</td>
+		<td>{{ cand.totalVotes }}</td>
+	</tr>`
 }

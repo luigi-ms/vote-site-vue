@@ -1,0 +1,28 @@
+{
+	"list": [
+		{
+			"name": "Lula",
+			"id": 13,
+			"totalVotes": 0,
+			"party": "PT"
+		},
+		{
+			"name": "Bolsonaro",
+			"id": 22,
+			"totalVotes": 0,
+			"party": "PL"
+		},
+		{
+			"name": "Ciro",
+			"id": 12,
+			"totalVotes": 0,
+			"party": "PDT"
+		},
+		{
+			"name": "Tebet",
+			"id": 15,
+			"totalVotes": 0,
+			"party": "MDB"
+		}
+	]
+}
