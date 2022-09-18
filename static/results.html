@@ -16,7 +16,7 @@
 			<div class="container-fluid">
 				<a href="./index.html" class="navbar-brand">VoteSys</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon" />
+					<span class="navbar-toggler-icon"></span>
 				</button>
 
 				<div class="collapse navbar-collapse" id="navbarNav">
@@ -32,9 +32,9 @@
 			</div>
 		</nav>
 
-		<main class="container-fluid">
+		<main class="container-sm">
 			<div class="row">
-				<div class="col-12">
+				<div class="col-sm-12 col-md-10">
 					<h1>Resultado</h1>
 
 					<table class="table table-info table-striped table-responsive">
@@ -56,27 +56,22 @@
 			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
 			crossorigin="anonymous"></script>
 
-		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-		
-		<script>
-		//	import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-//			import ResultsComponent from './results.component.js';
-			const candidates = require('./candidates.json');
+		<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+		<script>eruda.init();</script>	
 
+		<script type="module">
+			import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+			import candidates from "./candidates.json" assert {type:'json'};
+		
   		createApp({
 				data() {
 					return {
 						candslist: [],
-						jsonFile: importing()
+						jsonFile: candidates
 					}
 				},
 				mounted() {
 					this.candslist = this.jsonFile.list;
-				},
-				methods: {
-					importing() {
-						return JSON.parse(candidates);
-					}
 				},
 				template: `<tr v-for='cand in candslist' :key='cand'>
 					<td>{{ cand.id }}</td>
@@ -84,10 +79,8 @@
 					<td>{{ cand.party }}</td>
 					<td>{{ cand.totalVotes }}</td>
 				</tr>`
-			}).mount('#app')
+			}).mount('#app');
 		</script>
 
-		<script src="//cdn.jsdelivr.net/npm/eruda"></script>
-		<script>eruda.init();</script>
 	</body>
 </html>
